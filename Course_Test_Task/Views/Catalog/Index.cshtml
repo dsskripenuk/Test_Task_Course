@@ -1,0 +1,11 @@
+﻿@using Course_Test_Task.Models;
+@model List<Catalog>
+
+<ul>
+    @foreach (var catalog in Model)
+    {
+        <li>
+            <a asp-action="Details" asp-controller="Catalog" asp-route-id="@catalog.CatalogId">@catalog.Name</a>
+        </li>
+    }
+</ul>

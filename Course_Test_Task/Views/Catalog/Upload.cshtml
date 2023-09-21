@@ -1,0 +1,16 @@
+﻿@using Course_Test_Task.Models;
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="catalogFile">Виберіть файл зі структурою каталогів:</label>
+        <input type="file" name="catalogFile" id="catalogFile" class="form-control-file">
+    </div>
+    <button type="submit" class="btn btn-primary">Імпортувати</button>
+</form>
+
+@if (Model.Imported)
+{
+    <div class="alert alert-success mt-3">
+        Структура каталогів була успішно імпортована.
+    </div>
+}
